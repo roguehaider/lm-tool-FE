@@ -1,12 +1,12 @@
 {
   "name": "lvrg-mcp",
   "version": "1.0.0",
-  "description": "LVRG Lead Magnet Engine — MCP Server",
+  "description": "LVRG Lead Magnet Engine \u2014 MCP Server",
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start": "node api.js && node server.js",
+    "dev": "node api.js && node --watch server.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
