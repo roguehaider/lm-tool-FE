@@ -1,11 +1,8 @@
 import type { User } from '@supabase/supabase-js'
 
-/** Matches middleware: only when explicitly enabled and Next dev server (not `next start`). */
+/** Returns true when DEV_BYPASS_AUTH=true is set — works in any environment including Vercel. */
 export function isDevAuthBypass(): boolean {
-  return (
-    process.env.NODE_ENV === 'development' &&
-    process.env.DEV_BYPASS_AUTH === 'true'
-  )
+  return process.env.DEV_BYPASS_AUTH === 'true'
 }
 
 /** Minimal user for Sidebar when bypassing auth locally (never sent to Supabase). */
